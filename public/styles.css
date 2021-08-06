@@ -1,0 +1,38 @@
+body {
+  background-color: #f0f0f0;
+}
+li {
+  list-style-type: none;
+  font-family: "arial";
+  margin-bottom: 2px;
+}
+#flag {
+  height: 70px;
+}
+.info {
+  color: #0001fe;
+  font-family: "arial";
+  font-weight: bold;
+  letter-spacing: 0.6px;
+}
+select {
+  margin-top: 6px;
+}
+.counter {
+  color: #0001fe;
+  font-family: "arial";
+  font-weight: bold;
+  font-size: 45px;
+}
+.blankslate {
+  position: relative;
+  padding: 32px;
+  text-align: left;
+}
+
+#pagination{
+  border: 1px solid #000;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 0;
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/@primer/css@^16.0.0/dist/primer.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body class="p-4 mr-3">
+    <div class="clearfix">
+      <div class="col-2 float-left p-1" style="width: 13%">
+        <ul>
+          <li>Machine: <span class="info">DESTOP_20202</span></li>
+          <li>Server: <span class="info">Eng_EOS_0221</span></li>
+          <li>Duration: <span class="info">60 minutes</span></li>
+          <li>Machine: <span class="info">DESTOP_20202</span></li>
+          <li>Q mark: <span class="info">1</span></li>
+        </ul>
+      </div>
+      <div class="col-4 float-left p-1" style="width: 24%">
+        <ul>
+          <li>Student: <span class="info">tuanahe130465</span></li>
+          <li>Exam Code: <span class="info">MAD101</span></li>
+          <li>
+            <ul class="d-md-inline-block">
+              <li class="d-inline">Open Code:</li>
+              <li class="d-inline">
+                <input type="text" disabled style="width: 120px" />
+              </li>
+              <li class="d-inline">
+                <button type="button" disabled>Show Question</button>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <ul class="d-md-inline-block">
+              <li class="d-inline">
+                Total Marks: <span class="info">50</span>
+              </li>
+              <li class="d-inline" style="margin-left: 55px">
+                Vol:
+                <select size="1" multiple disabled>
+                  <option>8</option>
+                </select>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul class="d-md-inline-block">
+              <li class="d-inline">
+                Font:
+                <select size="1" multiple disabled>
+                  <option>Microsoft Sans Serif</option>
+                </select>
+              </li>
+              <li class="d-inline">
+                Size:
+                <select size="1" multiple style="border: 1">
+                  <option>10</option>
+                </select>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col-4 float-left p-1">
+        <ul class="d-md-inline-block">
+          <li class="d-inline">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_North_Vietnam_%281955%E2%80%931976%29.svg/230px-Flag_of_North_Vietnam_%281955%E2%80%931976%29.svg.png"
+              id="flag"
+              alt="cờ Việt Nam"
+            />
+          </li>
+          <p class="counter" id="time">60:00</p>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tabnav">
+      <nav class="tabnav-tabs" aria-label="Multiple Choices">
+        <a class="tabnav-tab" aria-current="Multiple Choices"
+          >Multiple Choices</a
+        >
+      </nav>
+      <div class="container clearfix p-1" style="background-color: #fff">
+        <div class="container" style="background-color: #f0f0f0">
+          <div class="clearfix">
+            <div class="col-1 float-left">
+              <div class="clearfix">
+                <p class="info ml-5 mt-6">Answer</p>
+                <div class="p-1 ml-6">
+                  <form>
+                    <div class="form-checkbox">
+                      <label>
+                        <input type="checkbox" />
+                        A
+                      </label>
+                    </div>
+                    <div class="form-checkbox">
+                      <label>
+                        <input type="checkbox" />
+                        B
+                      </label>
+                    </div>
+                    <div class="form-checkbox">
+                      <label>
+                        <input type="checkbox" />
+                        C
+                      </label>
+                    </div>
+                    <div class="form-checkbox">
+                      <label>
+                        <input type="checkbox" />
+                        D
+                      </label>
+                    </div>
+                  </form>
+                </div>
+                <button class="ml-3" style="width: 80px">Next</button>
+              </div>
+            </div>
+            <div class="col-11 float-left px-1">
+              <p class="info mt-2">
+                Multiple Choices <span id="number">0</span>/<span
+                  id="lq"
+                ></span>
+              </p>
+              <div
+                class="border p-1 mt-2"
+                style="background-color: #fff; width: 100%; overflow-y: scroll"
+              >
+                <div class="blankslate" style="height: 500px">
+                  <% if (jsonData.length > 0) { %>
+                  <pre
+                    class="mb-1"
+                    style="
+                      font-family: Arial, Helvetica, sans-serif;
+                      font-size: 14px;
+                    "
+                  >
+<%= jsonData[0].allQuestion %></pre
+                  >
+                  <br />
+                  <p>Đáp án: <%= jsonData[0].answer %></p>
+                  <% } %>
+                  <br /><br />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="paginate" aria-label="Pagination">
+      <div class="pagination"></div>
+    </nav>
+    <div class="form-checkbox">
+      <label style="color: #0001fe">
+        <input type="checkbox" />
+        I want to finish the exam.
+      </label>
+    </div>
+    <button
+      class=""
+      style="width: 80px; background-color: #ffffc0; color: rgb(179, 179, 46)"
+    >
+      Finish
+    </button>
+
+    <script>
+                        function startTimer(duration, display) {
+                            var timer = duration, minutes, seconds;
+                            setInterval(function () {
+                                minutes = parseInt(timer / 60, 10);
+                                seconds = parseInt(timer % 60, 10);
+
+                                minutes = minutes < 10 ? "0" + minutes : minutes;
+                                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                                display.textContent = minutes + ":" + seconds;
+
+                                if (--timer < 0) {
+                                    timer = duration;
+                                }
+                            }, 1000);
+                        }
+
+                        window.onload = function () {
+                            var fiveMinutes = 60 * 60,
+                                display = document.querySelector('#time');
+                            startTimer(fiveMinutes, display);
+                        };
+
+                        let myVar = <%- JSON.stringify(jsonData) %>;
+                        let clicks = 1;
+                        document.querySelector("#lq").innerText = myVar.length-1;
+                        document.querySelector("body > div.tabnav > div > div > div > div.col-11.float-left.px-1 > div > div > pre").innerText = `Câu ${clicks} \n` + myVar[clicks].allQuestion;
+
+                        document.querySelector("body > div.tabnav > div > div > div > div.col-1.float-left > div > button").onclick = function() {
+                          clicks += 1;
+                         document.querySelector("body > div.tabnav > div > div > div > div.col-11.float-left.px-1 > div > div > pre").innerText = `Câu ${clicks} \n` + myVar[clicks].allQuestion;
+                         document.querySelector("body > div.tabnav > div > div > div > div.col-11.float-left.px-1 > div > div > p").innerText = `Đáp án: ` + myVar[clicks].answer;
+                        }
+
+                        for(let i = 0; i < myVar.length; i++ ){
+                            document.querySelector("body > nav > div").innerHTML += `<a id="pagination" onclick="replaceQ(this)">${i}</a>`
+                        }
+                        function replaceQ(e) {
+                          document.querySelector("body > div.tabnav > div > div > div > div.col-11.float-left.px-1 > div > div > pre").innerText = `Câu ${Number(e.innerText)} \n` + myVar[Number(e.innerText)].allQuestion;
+                          document.querySelector("body > div.tabnav > div > div > div > div.col-11.float-left.px-1 > div > div > p").innerText = `Đáp án: ` + myVar[Number(e.innerText)].answer;
+                          document.querySelector("#number").innerText = e.innerText;
+                          clicks = Number(e.innerText);
+                      }
+    </script>
+  </body>
+</html>
