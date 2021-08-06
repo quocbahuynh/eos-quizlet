@@ -1,7 +1,7 @@
 
 # EOS QUIZLET
 
-Website mô phỏng phần mềm thi EOS của Đại Học FPT giúp các bạn sinh viên dễ dàng học thuộc bài từ QUIZLET.
+Website học Quizlet với giao diện phần mềm thi EOS của Đại Học FPT giúp các bạn sinh viên dễ dàng học thuộc bài. 
 
 
 ## Documentation
