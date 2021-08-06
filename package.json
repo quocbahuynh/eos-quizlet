@@ -1,7 +1,7 @@
 {
   "name": "eos-deploy",
   "version": "1.0.0",
-  "description": "",
+  "description": "Deploy EOS Quizlet to Vercel",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,14 @@
   },
   "devDependencies": {
     "@vercel/node": "^1.12.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quocbahuynh/eos-quizlet.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/quocbahuynh/eos-quizlet/issues"
+  },
+  "homepage": "https://github.com/quocbahuynh/eos-quizlet#readme"
 }
