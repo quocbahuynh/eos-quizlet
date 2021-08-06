@@ -1,2 +1,2 @@
 # eos-quizlet
-Deploy EOS Quizlet to Vercel 
+Deploy EOS Quizlet to Heroku
