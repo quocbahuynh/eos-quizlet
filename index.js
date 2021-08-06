@@ -2,6 +2,10 @@ const express = require("express");
 const app = new express();
 const ejs = require("ejs");
 const axios = require("axios");
+let port = process.env.PORT;
+if (port == null || port == "") {
+port = 4000;
+}
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -44,6 +48,6 @@ app.use(function (req, res, next) {
   res.redirect("/");
 });
 
-app.listen(3000, () => {
-  console.log("App listening on port 3000");
+app.listen(port, () => {
+  console.log("App listening...");
 });
